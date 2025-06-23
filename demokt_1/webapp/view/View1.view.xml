@@ -1,0 +1,14 @@
+<mvc:View controllerName="sap.rr.demokt1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <List id="_IDGenList" items="{path: 'myModel>/employees'}">
+            <StandardListItem 
+                id="_IDGenStandardListItem"
+                title="{myModel>name}" 
+                type="Navigation" 
+                description="{myModel>role}" 
+                icon="{= ${myModel>active} ? 'sap-icon://bbyd-active-sales' : 'sap-icon://status-inactive'}"/>
+        </List>
+    </Page>
+</mvc:View>
