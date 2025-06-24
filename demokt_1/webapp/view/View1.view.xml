@@ -2,13 +2,17 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <List id="_IDGenList" items="{path: 'myModel>/employees'}">
-            <StandardListItem 
+        <List id="_IDGenList" items="{path: '/Products'}" itemPress=".onItemPress">
+            <ObjectListItem 
                 id="_IDGenStandardListItem"
-                title="{myModel>name}" 
+                title="{ProductName}" 
                 type="Navigation" 
-                description="{myModel>role}" 
-                icon="{= ${myModel>active} ? 'sap-icon://bbyd-active-sales' : 'sap-icon://status-inactive'}"/>
+                icon="sap-icon://action"
+                number="{UnitPrice}"
+                numberState="{= ${Discontinued} ? 'Success' : 'Warning'}">
+                    <ObjectAttribute id="_IDGenObjectAttribute" text="{QuantityPerUnit}"/>
+
+            </ObjectListItem>
         </List>
     </Page>
 </mvc:View>

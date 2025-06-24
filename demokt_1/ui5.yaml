@@ -15,6 +15,11 @@ server:
             - /resources
             - /test-resources
           url: https://ui5.sap.com
+    - name: ui5-middleware-simpleproxy
+      afterMiddleware: fiori-tools-proxy
+      mountPath: /V2
+      configuration:
+        baseUri: "https://services.odata.org"
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:

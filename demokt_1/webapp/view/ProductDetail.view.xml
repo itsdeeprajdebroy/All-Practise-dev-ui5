@@ -1,0 +1,12 @@
+<mvc:View controllerName="sap.rr.demokt1.controller.ProductDetail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page2" title="{i18n>title}">
+        <Label id="_IDGenLabel1" text="ProductName"></Label>
+        <Text id="_IDGenText" text="{ProductName}"></Text>
+        <Label id="_IDGenLabel2" text="QuantityPerUnit"></Label>
+        <Text id="_IDGenText1" text="{QuantityPerUnit}"></Text>
+        <Label id="_IDGenLabel3" text="UnitPrice"></Label>
+        <Text id="_IDGenText2" text="{UnitPrice}"></Text>
+    </Page>
+</mvc:View>
